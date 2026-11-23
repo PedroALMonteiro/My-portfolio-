@@ -1,0 +1,522 @@
+:root {
+  --fundo: #0f1412;
+  --fundo-2: #141b17;
+  --superficie: #1a211d;
+  --borda: #2a352e;
+  --texto: #e6ebe4;
+  --texto-suave: #9aa79d;
+  --titulo: #f2f4ef;
+  --link: #8fd3a0;
+  --verde: #54b36b;        
+  --verde-escuro: #1f4d2c; 
+  --raio: 10px;
+  --fonte-titulo: "Bowlby One", Impact, "Arial Black", sans-serif;
+  --fonte-texto: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--fundo), var(--fundo-2));
+  background-attachment: fixed;
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  line-height: 1.7;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: min(1000px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+
+h1,
+h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  color: var(--titulo);
+  text-shadow: 3px 3px 0 var(--verde-escuro);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 0 0 1.25rem;
+  text-shadow: 2px 2px 0 var(--verde-escuro);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+  color: var(--titulo);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: #c3ebcd;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ambar);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Link para pular direto ao conteúdo */
+.pular {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 20;
+  padding: 0.6rem 1rem;
+  background: var(--verde);
+  color: var(--fundo);
+  font-weight: 700;
+  border-radius: 0 0 8px 0;
+}
+
+.pular:focus {
+  left: 0;
+}
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(15, 20, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--verde);
+}
+
+.cabecalho .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-block: 0.9rem;
+}
+
+.marca {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  color: var(--titulo);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--verde-escuro);
+}
+
+.marca:hover {
+  color: var(--titulo);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: var(--texto);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+  border-color: var(--verde);
+}
+
+.menu a[aria-current="page"] {
+  color: var(--titulo);
+  border-color: var(--verde);
+}
+
+/* ---------- Seções ---------- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: clamp(3rem, 10vw, 6rem) 2rem;
+}
+
+.hero-texto {
+  flex: 1 1 340px;
+}
+
+.foto {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border: 3px solid var(--verde);
+  border-radius: var(--raio);
+  box-shadow: 6px 6px 0 var(--verde-escuro);
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  color: var(--verde);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 60ch;
+  font-size: 1.1rem;
+  color: var(--texto);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.secao {
+  padding-block: 2.5rem;
+}
+
+.bloco {
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- Botões ---------- */
+
+.botao {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  border: 2px solid var(--verde);
+  border-radius: 6px;
+  background: var(--verde);
+  color: var(--fundo);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: #7acb8f;
+  border-color: #7acb8f;
+  color: var(--fundo);
+}
+
+.botao--vazado {
+  background: transparent;
+  color: var(--texto);
+}
+
+.botao--vazado:hover {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: var(--fundo);
+}
+
+/* ---------- Cartões e grade (Grid) ---------- */
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.cartao {
+  padding: 1.4rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  transition: border-color 0.2s;
+}
+
+.cartao:hover {
+  border-color: var(--verde);
+}
+
+.cartao > :last-child {
+  margin-bottom: 0;
+}
+
+.cartao ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.painel {
+  padding: 1.75rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--verde);
+  border-radius: var(--raio);
+}
+
+.painel > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Página Sobre ---------- */
+
+.duas-colunas {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+  .duas-colunas {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.lista-simples,
+.lista-recursos {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.lista-simples li,
+.lista-recursos li {
+  margin-bottom: 0.6rem;
+}
+
+.lista-simples li::marker,
+.lista-recursos li::marker {
+  color: var(--verde);
+}
+
+.fora {
+  margin: 0;
+}
+
+.fora dt {
+  margin-top: 1rem;
+  color: var(--verde);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fora dt:first-child {
+  margin-top: 0;
+}
+
+.fora dd {
+  margin: 0.15rem 0 0;
+}
+
+/* ---------- Página Projetos ---------- */
+
+.projeto {
+  margin-bottom: 1.75rem;
+  padding: 1.75rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+}
+
+.projeto > :last-child {
+  margin-bottom: 0;
+}
+
+
+.selo {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.15rem 0.75rem;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.selo--ok {
+  color: var(--verde);
+}
+
+.selo--andamento {
+  color: var(--ambar);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(84, 179, 107, 0.12);
+  color: var(--link);
+  font-size: 0.85rem;
+}
+
+/* ---------- Página Estudos ---------- */
+
+.tecnologias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech {
+  padding: 1.25rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  transition: border-color 0.2s;
+}
+
+.tech:hover {
+  border-color: var(--verde);
+}
+
+.tech img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.75rem;
+}
+
+.tech h3 {
+  margin-bottom: 0.25rem;
+}
+
+.tech p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---------- Contato ---------- */
+
+.contato-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+#aviso-copia {
+  margin-left: 0.75rem;
+  color: var(--texto-suave);
+}
+
+
+
+.rodape {
+  margin-top: 3rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--borda);
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.rodape .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+.rodape-links {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rodape a {
+  color: var(--texto-suave);
+}
+
+.rodape a:hover {
+  color: var(--link);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

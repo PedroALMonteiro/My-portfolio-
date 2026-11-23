@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projetos de Pedro Monteiro: ReciMap, Cofre Seguro e um jogo narrativo no-code.">
+  <title>Projetos | Pedro Monteiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container">
+      <a class="marca" href="index.html">Pedro Monteiro</a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="estudos.html">Estudos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container">
+
+      <section class="secao">
+        <h1>Projetos</h1>
+        <p class="lead">Trabalhos do meu primeiro período. Dois deles ainda estão em desenvolvimento.</p>
+      </section>
+
+      <article class="projeto" id="recimap">
+        <header>
+          <p class="selo selo--andamento">Projeto 1 · Missão em andamento</p>
+          <h2>ReciMap</h2>
+        </header>
+        <p>Um mapa tátil com audiodescrição, pensado para turistas com deficiência visual. Ele mostra três prédios do Marco Zero, no Recife, entre eles a Caixa Cultural, e conta a história e a arquitetura de cada um para que o visitante tenha uma boa experiência na cidade.</p>
+        <h3>Como o mapa funciona</h3>
+        <ul class="lista-recursos">
+          <li>Relevo inspirado em mapas tridimensionais que já existem.</li>
+          <li>Braille como apoio, para quem lê.</li>
+          <li>Botões que a pessoa aperta para ouvir o áudio com a história e a descrição dos prédios.</li>
+          <li>Uso intuitivo, para o visitante explorar sem precisar de instruções.</li>
+        </ul>
+        <p>Como o uso do Braille vem diminuindo com as tecnologias de áudio, a audiodescrição também alcança quem não lê Braille. O protótipo usa Arduino.</p>
+        <!-- Escreva aqui, em uma frase, o que você fez neste projeto. -->
+        <ul class="tags">
+          <li>Arduino</li>
+          <li>Braille</li>
+          <li>Audiodescrição</li>
+          <li>Trabalho em grupo</li>
+        </ul>
+        <p><a class="botao botao--vazado" href="https://sites.google.com/cesar.school/grupo-5-2026-2/home" target="_blank" rel="noopener noreferrer">Ver site do projeto</a></p>
+      </article>
+
+      <article class="projeto" id="cofre-seguro">
+        <header>
+          <p class="selo selo--andamento">Interface em desenvolvimento</p>
+          <h2>Cofre Seguro</h2>
+        </header>
+        <p>Um gerenciador de credenciais feito em grupo, em Python. Nasceu no terminal e agora ganha uma interface com a biblioteca Flet. O foco foi o público jovem, que costuma usar a mesma senha em vários serviços, o que expõe todas as contas se uma delas vazar.</p>
+        <h3>O que ele faz</h3>
+        <ul class="lista-recursos">
+          <li>Cadastro de usuário e armazenamento de credenciais por categoria: banco, redes sociais, estudos, outros e categorias criadas pelo próprio usuário.</li>
+          <li>Requisitos de força de senha. Cada categoria tem uma força mínima definida, mostrada ao usuário.</li>
+          <li>Um assistente de IA (Groq) que gera senhas fortes e responde a dúvidas sem expor dados confidenciais. O usuário também pode criar a própria senha.</li>
+          <li>Registro de ações, com o que foi feito, o dia e o horário.</li>
+          <li>Resumo de segurança com a quantidade de senhas fracas, comuns e repetidas.</li>
+          <li>Para ver a senha de um serviço, o usuário confirma a senha da própria conta, criada no cadastro inicial.</li>
+          <li>Leitura, atualização (serviço, usuário, senha) e exclusão de credenciais.</li>
+        </ul>
+        <p>Minha parte favorita foi desenvolver o back-end, que exige raciocínio lógico para resolver um problema real e é um desafio constante.</p>
+        <ul class="tags">
+          <li>Python</li>
+          <li>Flet</li>
+          <li>Groq (IA)</li>
+          <li>Trabalho em grupo</li>
+        </ul>
+        <p><a class="botao botao--vazado" href="https://github.com/PedroALMonteiro/Projeto-CofreSeguro-Gerenciador-de-Credenciais" target="_blank" rel="noopener noreferrer">Ver código</a></p>
+      </article>
+
+      <article class="projeto" id="jogo-narrativo">
+        <header>
+          <p class="selo selo--ok">Missão cumprida · No-code · Em dupla</p>
+          <!-- Troque o título abaixo pelo nome do jogo. -->
+          <h2>Jogo narrativo no-code</h2>
+        </header>
+        <p>Um jogo curto, feito em dupla sem escrever código, com uma história pensada com cuidado. A protagonista é uma gata que já morreu, mas não sabe disso: ela acredita estar perdida e tenta entender onde está.</p>
+        <p>No caminho, encontra personagens marcantes que a ajudam, mas que também não entendem tudo sobre ela, como o fato de ter um dono. Eles estranham a ideia e acham os humanos perigosos. O jogo é breve de propósito, mas a história foi planejada desde o início.</p>
+        <ul class="tags">
+          <li>No-code</li>
+          <li>Narrativa</li>
+          <li>Trabalho em dupla</li>
+        </ul>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; <span id="ano">2026</span> Pedro de Almeida Monteiro</p>
+      <ul class="rodape-links">
+        <li><a href="https://github.com/PedroALMonteiro" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/pedro-monteiro-85697943b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
