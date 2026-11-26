@@ -68,6 +68,6 @@ Tema escuro e limpo, com detalhes inspirados no GTA San Andreas: títulos em fon
 
 ## Contato
 
-- E-mail: p.almeida.monteiro07@gmail.com
+- E-mail: pedroalmonteiro07@gmail.com
 - [GitHub](https://github.com/PedroALMonteiro)
 - [LinkedIn](https://www.linkedin.com/in/pedro-monteiro-85697943b)
