@@ -2,7 +2,7 @@
 
 Meu portfólio pessoal, feito com HTML, CSS e JavaScript puros. Sou estudante de Ciência da Computação na CESAR School e uso este site para reunir meus projetos, o que estudo e um pouco de quem sou fora do código.
 
-**Site publicado:** [pedromonteiro-tau.vercel.app](https://pedromonteiro-tau.vercel.app)
+**Site publicado:** [pedroalmonteiro07.vercel.app](https://pedroalmonteiro07.vercel.app)
 
 ## Páginas
 
